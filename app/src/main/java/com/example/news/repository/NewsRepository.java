@@ -26,8 +26,8 @@ public class NewsRepository {
         return newsRepository;
     }
 
-    public static MutableLiveData<NewsRepository> getNewsList() {
-        final MutableLiveData<NewsRepository> newsRepositoryMutableLiveData = new MutableLiveData<>();
+    public MutableLiveData<News> getNewsList() {
+        final MutableLiveData<News> newsRepositoryMutableLiveData = new MutableLiveData<>();
         //TODO encrypt API key
         iApiHelper.getTopHeadlines("us", Constants.API_KEY)
             .subscribeOn(Schedulers.io())
