@@ -33,8 +33,8 @@ public class ServiceHelper {
             retrofit= new Retrofit.Builder()
                     .baseUrl(Constants.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
-                  .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                   .client(client)
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .client(client)
                     .build();
         }
         return retrofit.create(IApiHelper.class);
